@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4024e0;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      background-color: #4024e0;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #4024e0;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background-color: #fafafa;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product {
+      width: 300px;
+      text-align: center;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      border: 10px solid white;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+    .product-title {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    footer {
+      background-color: #4024e0;
+      color: white;
+      text-align: right;
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logotipo">
+      <h1>Outlook.es</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product">
+      <a href="https://www.example.com/producto1" target="_blank">
+        <img src="image1.png" alt="Producto 1">
+        <div class="product-title">Visual studio</div>
+      </a>
+    </div>
+    <div class="product">
+      <a href="https://www.example.com/producto2" target="_blank">
+        <img src="image2.png" alt="Producto 2">
+        <div class="product-title">Teams</div>
+      </a>
+    </div>
+    <div class="product">
+      <a href="https://www.example.com/producto3" target="_blank">
+        <img src="image3.png" alt="Producto 3">
+        <div class="product-title">Office 365</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Daniel Marquez
+  </footer>
+</body>
+</html>

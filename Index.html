@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ej3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4024e0;
+      color: white;
+      padding: 10px 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      background-color: #4024e0;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #4024e0;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      background-color: #fafafa;
+    }
+    .left-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+    }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      position: relative;
+    }
+
+    .form-container input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s;
+    }
+    .form-container input:focus {
+      border-color: #4024e0;
+      outline: none;
+    }
+    .form-container button {
+      padding: 10px;
+      background-color: #4024e0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      position: relative;
+    }
+    .form-container button:hover {
+      background-color: #4024e0;
+    }
+    .tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #090979, #00d4ff);
+      color: white;
+      padding: 10px;
+      border-radius: 30% 70% 53% 47% / 30% 45% 55% 70%;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s ease;
+      white-space: nowrap;
+      font-size: 0.9em;
+      text-align: center;
+      z-index: 10;
+      width: 369px;
+      height: 369px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-container button:hover + .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+    .right-column {
+      flex: 2;
+      font-size: 1.2em;
+      color: #555;
+    }
+    .right-column p {
+      margin: 0;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #4024e0;
+      color: white;
+      text-align: right;
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logotipo">
+      <h1>Outlook.es</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="left-column">
+      <form class="form-container">
+        <input type="text" placeholder="Escribe algo...">
+        <input type="text" placeholder="Escribe algo más...">
+        <button type="button">Acceder</button>
+        <div class="tooltip">Entra y descubre</div>
+      </form>
+    </div>
+    <div class="right-column">
+      <p>Lorem ipsum...</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Daniel Marquez
+  </footer>
+</body>
+</html>
